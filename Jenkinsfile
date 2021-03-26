@@ -14,7 +14,7 @@ stage('create role') {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
       ]]) {
         ansiColor('xterm') {
-          sh 'aws iam create-role --role-name Test-Role --assume-role-policy-document file://Test-Role-Trust-Policy.json'
+          sh 'python3 role.py'
         }
       }
     }
