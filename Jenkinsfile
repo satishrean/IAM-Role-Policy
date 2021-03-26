@@ -15,9 +15,6 @@ stage('create role') {
       ]]) {
         ansiColor('xterm') {
           sh '''
-          apt-get update
-          apt-get install python3-pip
-          python3 -m pip3 install --user boto3
           python3 role.py
           '''
         }
