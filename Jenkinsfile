@@ -14,7 +14,10 @@ stage('create role') {
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
       ]]) {
         ansiColor('xterm') {
-          sh 'python3 role.py'
+          sh '''
+          python3 -m pip3 install --user boto3
+          python3 role.py
+          '''
         }
       }
     }
