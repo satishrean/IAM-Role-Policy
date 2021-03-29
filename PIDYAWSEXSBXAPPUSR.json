@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "sts:GetSessionToken",
+                "iam:PassRole",
+                "iam:Get*",
+                "iam:List*",
+                "sts:GetFederationToken",
+                "sts:AssumeRoleWithSAML",
+                "sts:GetCallerIdentity",
+                "sts:AssumeRoleWithWebIdentity"
+            ],
+            "Resource": "*",
+            "Effect": "Allow",
+            "Sid": "VisualEditor0"
+        },
+        {
+            "Action": "sts:AssumeRole",
+            "Resource": [
+                "arn:aws:iam::128403973143:role/RIDY_AWS_EXSBX03_APPUSR"
+            ],
+            "Effect": "Allow",
+            "Sid": "VisualEditor1"
+        }
+    ]
+}
