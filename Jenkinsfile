@@ -15,7 +15,7 @@ stage('create role') {
       ]]) {
         ansiColor('xterm') {
           sh '''
-          python3 role.py
+          python3 role-policy-create.py -p PIDYAWSEXSBXAPPADM -r trust-relationship
           '''
         }
       }
