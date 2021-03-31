@@ -58,7 +58,7 @@ for opt, arg in opts:
         for rpart in role_name.split(","):
             print(rpart)
             try:
-                f = open('PIDYAWSEXSBXAPPADMUSR.json', 'r')
+                f = open(ppart+'.json', 'r')
                 rvalue = f.read()
                 #print(rvalue)
                 assume_role_document = json.loads(json.dumps(rvalue))
